@@ -86,6 +86,8 @@ for animal in animals:
 print('Суммарный вес всех животных {} кг'.format(all_weight))
 print('Самое тяжелое животное {} весит {} кг.'.format(heaviest_animal, max_weight))
 
+
+# вариант 2 решил через модуль, толком про него не чилал, но все работает.
 import gc
 
 all_weight_2 = 0
