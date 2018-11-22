@@ -1,7 +1,6 @@
 class Animal:
-    weight = 0  # kg
     want_to_eat = 100  # %
-    name = 'Unnamed'
+
 
     def __init__(self, weight, name):
         self.weight = weight
@@ -11,7 +10,7 @@ class Animal:
         self.want_to_eat -= feed  # Количество корма указываем в %
 
 
-class Birds(Animal):
+class Bird(Animal):
     eggs = 0
 
     def give_egg(self):
@@ -23,7 +22,7 @@ class Birds(Animal):
         self.eggs = 0
 
 
-class Animal_give_milk(Animal):
+class AnimalGiveMilk(Animal):
     have_milk = 10  # Литры
 
     def milk(self):
@@ -31,7 +30,7 @@ class Animal_give_milk(Animal):
         my_milk += have_milk
 
 
-class Sheeps(Animal):
+class Sheep(Animal):
     say = 'Бе-бе'
     need_to_cut = 10  # см
 
@@ -41,41 +40,41 @@ class Sheeps(Animal):
 
 
 
-class Cows(Animal_give_milk):
+class Cow(AnimalGiveMilk):
     say = 'Mууу'
 
 
-class Goats(Animal_give_milk):
+class Goat(AnimalGiveMilk):
     say = 'Ме-ме'
 
 
-class Geese(Birds):
+class Goose(Bird):
     say = 'Га-га'
 
 
-class Chikens(Birds):
+class Chiken(Bird):
     say = 'Ко-ко'
 
 
-class Ducks(Birds):
+class Duck(Bird):
     say = 'Кря-кря'
 
 
-goose_gray = Geese(4, 'Серый')
-goose_white = Geese(3, 'Белый')
+goose_gray = Goose(4, 'Серый')
+goose_white = Goose(3, 'Белый')
 
-cow = Cows(350, 'Манька')
+cow = Cow(350, 'Манька')
 
-sheep_barashek = Sheeps(150, 'Барашек')
-sheep_kudryash = Sheeps(170, 'Кудрявый')
+sheep_barashek = Sheep(150, 'Барашек')
+sheep_kudryash = Sheep(170, 'Кудрявый')
 
-chiken_ko = Chikens(2, 'Ко-Ко')
-chiken_ku = Chikens(2.5, 'Кукареку')
+chiken_ko = Chiken(2, 'Ко-Ко')
+chiken_ku = Chiken(2.5, 'Кукареку')
 
-goat_roga = Goats(80, 'Рога')
-goat_kopyta = Goats(75, 'Копыта')
+goat_roga = Goat(80, 'Рога')
+goat_kopyta = Goat(75, 'Копыта')
 
-duck = Ducks(2, 'Кряква')
+duck = Duck(2, 'Кряква')
 
 animals = [goose_gray, goose_white, cow, sheep_barashek, sheep_kudryash, chiken_ko, chiken_ku, goat_roga, goat_kopyta,
            duck]
